@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Sticky header
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 1) {
+                    console.log("scrolling");
+                    $("#header").addClass("sticky");
+                } else {
+                    console.log("not scrolling");
+                    $("#header").removeClass("sticky");
+                }
+            })
+
+            //Change text on email form submit
+            $("button.submit").click(function () {
+                $(".subscribe-text").text("Thanks for Signing Up!");
+                $(".subscribe-text").attr("style", "font-size: 1em")
+                $(".input-container").remove();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="announcement-bar">
+            <p class="announcement">30% off with code FUN30</p>
+        </div>
+        <div class="logo">
+            <h1>Store Logo</h1>
+        </div>
+        <div class="header-nav-menu">
+            <ul>
+                <li class="catalog1"><a href="#Top">Clothing</a></li>
+                <li class="catalog2"><a href="#Top">Bags</a></li>
+                <li class="catalog3"><a href="#Top">Shoes</a></li>
+                <li class="catalog4"><a href="#Top">Accessories</a></li>
+                <li class="catalog5"><a href="#Top">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="mid-content">
+            <a href="https://unsplash.com/photos/DqJMxq5ZDqA">
+                <img src="./images/Picture1.jpg" alt="shirts"></a>
+            <a href="https://unsplash.com/photos/Np_nvRuhpUo"><img src="./images/Picture2.jpg" alt="shoes"></a>
+            <a href="https://unsplash.com/photos/5oqnTWcrWto"><img src="./images/Picture3.jpg" alt="backpack"></a>
+        </div>
+
+        <div class="products-container">
+            <div class="product-heading">
+                <h3 class="catalog6">Top Sellers</h3>
+            </div>
+            <div class="products">
+                <div class="prod-preview">
+                    <a href="https://unsplash.com/photos/fSN3Q_imqrA">
+                        <img src="./images/tank_tops.jpg" alt="tank-tops"></a>
+                    <div class="product-info">
+                        <p class="product-name">Tank Top</p>
+                        <p class="product-price">$X.XX</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="prod-preview">
+                    <a href="https://unsplash.com/photos/fSN3Q_imqrA">
+                        <img src="./images/tank_tops.jpg" alt="tank-tops"></a>
+                    <div class="product-info">
+                        <p class="product-name">Tank Top</p>
+                        <p class="product-price">$X.XX</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="our-brand">
+        <a href="https://unsplash.com/photos/5obYWU5UXdI"><img src="./images/our-brand.jpg" alt="thread-spools" id="our-brand-img"></a>
+        <div class="our-brand-text">
+            <h3>Our Brand</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-nav-menu">
+            <ul>
+                <li><a href="#Bottom">Contact Us</a></li>
+                <li><a href="#Bottom">Our Brand</a></li>
+                <li><a href="#Bottom">Index</a></li>
+            </ul>
+        </div>
+        <div class="subscribe">
+            <p class="subscribe-text">Be the first to know about sales and special promotions!</p>
+            <div class="input-container">
+                <input id="subscribe" type="email" placeholder="Subscribe" required>
+                <button type="submit" class="submit"><span class="material-symbols-outlined">
+                        east
+                    </span></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
